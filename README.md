@@ -23,6 +23,7 @@ Arrays hold value of the same type at contiguous memory locations. In an array, 
 #### Time complexity
 
 | Operation | Big O | Note |
+|---|---|---|
 | Access | O(1) |  |
 | Search | O(n) |  |
 | Search sorted array | O(log(n)) |  |
