@@ -22,14 +22,14 @@ Arrays hold value of the same type at contiguous memory locations. In an array, 
 
 #### Time complexity
 
-| Operation | Big O | Note |
-|---|---|---|
-| Access | O(1) |  |
-| Search | O(n) |  |
-| Search sorted array | O(log(n)) |  |
-| Insert | O(n) | Insertion would require all the subsequent elements to the right by one and that takes O(n) |
-| Insert at the end | O(1) |  |
-| Remove | O(n) | Removal would require shifting all subsequent elements to the left by one and that takes O(n) |
+| Operation           | Big O     | Note                                                                                          |
+|---------------------|-----------|-----------------------------------------------------------------------------------------------|
+| Access              | O(1)      |                                                                                               |
+| Search              | O(n)      |                                                                                               |
+| Search sorted array | O(log(n)) |                                                                                               |
+| Insert              | O(n)      | Insertion would require all the subsequent elements to the right by one and that takes O(n)   |
+| Insert at the end   | O(1)      |                                                                                               |
+| Remove              | O(n)      | Removal would require shifting all subsequent elements to the left by one and that takes O(n) |
 
 #### Things to look out for during interview
 
