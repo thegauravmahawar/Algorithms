@@ -12,13 +12,14 @@
 - [Arrays](#arrays)
 - [String](#string)
 - [LinkedList](#linkedlist)
-- [Tree](#tree)
 - [Stack](#stack)
 - [Queue](#queue)
+- [Tree](#tree)
 - [Graph](#graph)
 - [Hashing](#hashing)
-- [Heap](#heap)
 - [Matrix](#matrix)
+- [Heap](#heap)
+- [Trie](#trie)
 
 ### Basics
 
