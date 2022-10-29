@@ -197,7 +197,47 @@ This is the reason why linked list doesn't need a contiguous block of memory. Be
 
 ### Stack
 
+In a LIFO data structure, the newest element added to the stack will be processed first. The stack is a LIFO data structure.
+
+A stack is nothing more than a data structure that contains a bunch of elements. And, like linked lists, stacks are linear, which means that there is a sequence and an order to how they are constructed and traversed.
+
+![LIFO](assets/lifo.png)
+
+```java
+import java.util.ArrayList;
+
+public class Stack {
+  private List<Integer> data;
+
+  public Stack() {
+    data = new ArrayList<>();
+  }
+  
+  public void push(int val) {
+      data.add(val);
+  }
+  
+  public boolean isEmpty() {
+      return data.isEmpty();
+  }
+  
+  public int top() {
+      return data.get(data.size() - 1);
+  }
+  
+  public boolean pop() {
+      if (isEmpty()) return false;
+      data.remove(data.size() - 1);
+      return true;
+  }
+}
+```
+
 ### Queue
+
+Queues abide by and operate, for the most part, according to the first-in, first-out principle. The first element in the queue, or the element at the front of the queue, is always the first to be processed and removed from the queue.
+
+![FIFO](assets/fifo.png)
 
 ### Tree
 
