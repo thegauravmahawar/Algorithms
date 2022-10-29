@@ -90,7 +90,7 @@ It depends on the answer to the question:
 
 In `Java` the string is `immutable`. Here, concatenation works by first allocating enough space for the new string, copy the contents from the old string and append to the new string.
 
-The time complexity of concatenation is `O(n<superscript>2</superscript>)`
+The time complexity of concatenation is O(n<sup>2</sup>).
 
 > The time complexity of both find operation and substring operation is `O(n)`.
  
