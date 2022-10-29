@@ -128,7 +128,11 @@ This is the reason why linked list doesn't need a contiguous block of memory. Be
 
 **Singly LinkedLists** are the simplest type of linked list, based solely on the fact that they only go in one direction. There is a single track that we can traverse the list in; we start at the **head** node, and traverse from the root until the last node, which will end at an empty **null** value.
 
+![Singly Linked List](assets/singly_linked_list.png)
+
 **Doubly LinkedLists** have two references contained within each node: a reference to the next node, as well as the previous node.
+
+![Doubly Linked List](assets/doubly_linked_list.png)
 
 > A LinkedList is usually efficient when it comes to adding and removing elements, but can be very slow to search and find a single element.
 
