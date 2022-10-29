@@ -73,6 +73,27 @@ Arrays hold value of the same type at contiguous memory locations. In an array, 
 
 A String is a sequence of characters. 
 
+#### Compare function
+
+> Can we use "==" to compare two strings?
+
+It depends on the answer to the question:
+
+> Does the language support operator overloading?
+
+- If the answer is `yes` (like `C++`), we may use "==" to compare two strings
+- If the answer is `no` (like `Java`), we may not use "==" to compare two strings. When we use "==", it actually compares whether the two objects are the same object.
+
+#### Immutable or Mutable
+
+`Immutable` means that you can't change the content of the string once it's initialized. 
+
+In `Java` the string is `immutable`. Here, concatenation works by first allocating enough space for the new string, copy the contents from the old string and append to the new string.
+
+The time complexity of concatenation is `O(n<superscript>2</superscript>)`
+
+> The time complexity of both find operation and substring operation is `O(n)`.
+ 
 | Operation           | Big O     |
 |---------------------|-----------|
 | Access              | O(1)      |
