@@ -186,6 +186,12 @@ This is the reason why linked list doesn't need a contiguous block of memory. Be
 
 ### Matrix
 
+Similar to 1-dimensional array, a 2-dimensional array also consists of a sequence of elements. But the elements can be laid out in a `rectangular grid` rather than a line.
+
+In Java, the 2-dimensional array is actually a 1-dimensional array which contains M elements, each of which is an array of N integers.
+
+![2D Array](assets/2d_array_java.png)
+ 
 ### Heap
 
 ### Trie
