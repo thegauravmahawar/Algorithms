@@ -16,7 +16,7 @@ public class FirstBadVersion {
         int high = n;
         while (low <= high) {
             //prevent high + low overflow
-            int mid = low + (high - low) / 2;
+            int mid = low + ((high - low) / 2);
             if (isBadVersion(mid)) {
                 high = mid - 1;
             } else {
