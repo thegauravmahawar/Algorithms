@@ -241,6 +241,42 @@ Queues abide by and operate, for the most part, according to the first-in, first
 
 ### Tree
 
+A tree is an abstract data type that represents a hierarchical structure with a set of connected nodes. Each node in a tree can be connected to many children, but must be connected to exactly one parent, except the root node, which has no parent.
+
+#### Common terms
+
+- **Root** - the topmost node of the tree, which never has any links or edges connecting to it
+- **Link/Edge** - the reference that a parent node contains that tells it what its child node is
+- **Child** - any node that has a parent node linked to it
+- **Parent** - any node that has a reference or link to another node
+- **Sibling** - any group of nodes that are the children of the same node
+- **Internal** - any node that has a child node (basically all parent nodes)
+- **Leaf** - any node that does not have a child node in the tree
+
+#### Key points
+
+- If a tree has n nodes, it will always have one less edge (n - 1).
+- Trees are recursive data structures because a tree is usually composed of smaller trees - often referred to as subtrees - inside it.
+- The depth of a node is the number of links or edges it takes to reach that node from the root of the tree.
+- The height of a node is the maximum number of links or edges (or longest path) from that node to its furthest leaf.
+
+#### Binary Tree
+
+Binary means two, so nodes in a binary tree have a maximum of two children.
+
+- Complete binary tree - A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible.
+- Balanced binary tree - A binary tree structure in which the left and the right subtrees of every node differ in height by no more than 1.
+
+![Binary Tree](assets/binary_tree.svg)
+
+Given such a tree, these are the results for various traversals:
+
+- In-order traversal - Left -> Root -> Right. Result: 2, 7, 5, 6, 11, 1, 9, 5, 9
+- Pre-order traversal - Root -> Left -> Right. Result: 1, 7, 2, 6, 5, 11, 9, 9, 5
+- Post-order traversal - Left -> Right -> Root. Result: 2, 5, 11, 6, 7, 5, 9, 9, 1
+
+#### Binary Search Tree
+
 ### Graph
 
 ### Hashing
