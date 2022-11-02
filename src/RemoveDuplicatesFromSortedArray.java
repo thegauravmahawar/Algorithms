@@ -1,3 +1,7 @@
+/**
+ * @author Gaurav Mahawar
+ * @see <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array">Remove Duplicates from Sorted Array</a>
+ */
 public class RemoveDuplicatesFromSortedArray {
 
     public static void main(String... args) {

@@ -2,6 +2,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Gaurav Mahawar
+ * @see <a href="https://leetcode.com/problems/two-sum">Two Sum</a>
+ */
 public class TwoSum {
 
     public static void main(String... args) {

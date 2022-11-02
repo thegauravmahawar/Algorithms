@@ -1,3 +1,7 @@
+/**
+ * @author Gaurav Mahawar
+ * @see <a href="https://leetcode.com/problems/first-bad-version">First Bad Version</a>
+ */
 public class FirstBadVersion {
 
     public static void main(String... args) {

@@ -1,3 +1,7 @@
+/**
+ * @author Gaurav Mahawar
+ * @see <a href="https://leetcode.com/problems/search-insert-position">Search Insert Position</a>
+ */
 public class SearchInsertPosition {
 
     public static void main(String... args) {

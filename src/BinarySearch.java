@@ -1,3 +1,7 @@
+/**
+ * @author Gaurav Mahawar
+ * @see <a href="https://leetcode.com/problems/binary-search">Binary Search</a>
+ */
 public class BinarySearch {
 
     public static void main(String... args) {

@@ -1,5 +1,9 @@
 import java.util.Arrays;
 
+/**
+ * @author Gaurav Mahawar
+ * @see <a href="https://leetcode.com/problems/squares-of-a-sorted-array">Squares of a Sorted Array</a>
+ */
 public class SquaresOfASortedArray {
 
     public static void main(String... args) {

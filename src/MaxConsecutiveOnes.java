@@ -1,3 +1,7 @@
+/**
+ * @author Gaurav Mahawar
+ * @see <a href="https://leetcode.com/problems/max-consecutive-ones">Max Consecutive Ones</a>
+ */
 public class MaxConsecutiveOnes {
 
     public static void main(String... args) {
