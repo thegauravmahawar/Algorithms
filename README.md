@@ -118,13 +118,13 @@
 ## Techniques
 
 - [Binary Search](#binary-search)
-- [Merge Sort](#merge sort)
-- [Two Pointer](#two pointer)
-- [Sliding Window](#sliding window)
+- [Merge Sort](#merge-sort)
+- [Two Pointer](#two-pointer)
+- [Sliding Window](#sliding-window)
 - [Recursion](#recursion)
-- [Dynamic Programming](#dynamic programming)
+- [Dynamic Programming](#dynamic-programming)
 - [Backtracking](#backtracking)
-- [Bit Manipulation](#bit manipulation)
+- [Bit Manipulation](#bit-manipulation)
 
 ### Binary Search
 
