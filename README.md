@@ -117,7 +117,7 @@
 
 ## Techniques
 
-- [Binary Search](#binary search)
+- [Binary Search](#binary-search)
 - [Merge Sort](#merge sort)
 - [Two Pointer](#two pointer)
 - [Sliding Window](#sliding window)
