@@ -132,7 +132,38 @@
 
 ### Two Pointer
 
+**Resources**
+
+- [Two Pointer Technique](https://www.codingninjas.com/codestudio/library/what-is-a-two-pointer-technique)
+- [Two Pointer Technique 2](https://afteracademy.com/blog/what-is-the-two-pointer-technique)
+
+It is the use of two different pointers (usually to keep track of array or string indices) to solve a problem.
+
+**Problem Types**
+
+- One slow-runner and the other fast-runner.
+- One pointer starts from the beginning while the other pointer starts from the end.
+
+**Reversing a String with two pointer technique**
+
+```java
+public class ReverseString {
+    public void reverse(char[] str) {
+        int i = 0, j = str.length - 1;
+        while (i < j) {
+            swap(str, i, j);
+            i++;
+            j--;
+        }
+    }
+}
+```
+
 ### Sliding Window
+
+**Resources**
+
+- [What is Sliding Window Algorithm?](https://stackoverflow.com/a/64111403/5331198)
 
 ### Recursion
 
