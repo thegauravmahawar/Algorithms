@@ -137,18 +137,19 @@
 - [Two Pointer Technique](https://www.codingninjas.com/codestudio/library/what-is-a-two-pointer-technique)
 - [Two Pointer Technique 2](https://afteracademy.com/blog/what-is-the-two-pointer-technique)
 
-It is the use of two different pointers (usually to keep track of array or string indices) to solve a problem.
+**Two Pointer** is a technique in which two pointers iterate across the data structure until one or both of them satisfy the necessary condition. It is the use of two different pointers (usually to keep track of array or string indices) to solve a problem.
 
 **Problem Types**
 
 - One slow-runner and the other fast-runner.
 - One pointer starts from the beginning while the other pointer starts from the end.
 
-**Reversing a String with two pointer technique**
+**Example 1: Reversing a String with two pointer technique**
 
 ```java
 public class ReverseString {
-    public void reverse(char[] str) {
+    
+    private void reverse(char[] str) {
         int i = 0, j = str.length - 1;
         while (i < j) {
             swap(str, i, j);
@@ -156,6 +157,33 @@ public class ReverseString {
             j--;
         }
     }
+    
+}
+```
+
+**Example 2: Given a sorted array A and an integer target, find if there exists `A[i]` and `A[j]` such that `A[i] + A[j] = target`, where `i != j`**
+
+- Set pointer 1 to index `0` and pointer 2 to `len(A) - 1`, they represent the smallest and the largest integers as the array is sorted
+- Compute the sum of the two numbers pointed to at each step
+- If the sum is greater than the target, we need to reduce the right pointer value. If the sum is smaller than the target, we need to increase the left pointer value
+
+```java
+public class TwoSumSortedArray {
+    
+    private int isPairSum(int[] A,  int target) {
+        
+        int p1 = 0;
+        int p2 = A.length - 1;
+        
+        while (p1 < p2) {
+            if (A[p1] + A[p2] == target) return 1;
+            else if (A[p1] + A[p2] < target) p1++;
+            else p2--;
+        }
+        
+        return 0;
+    }
+    
 }
 ```
 
@@ -163,7 +191,14 @@ public class ReverseString {
 
 **Resources**
 
-- [What is Sliding Window Algorithm?](https://stackoverflow.com/a/64111403/5331198)
+- [Sliding Window Technique](https://stackoverflow.com/a/64111403/5331198)
+- [Sliding Window Technique 2](https://www.youtube.com/watch?v=MK-NZ4hN7rs)
+
+**Recognizing Sliding Window problems**
+
+- Contiguous sequence of elements
+- String, Arrays, LinkedList
+- Finding minimum, maximum, longest, shortest, contained within a subset
 
 ### Recursion
 
