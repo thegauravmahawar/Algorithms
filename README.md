@@ -194,11 +194,56 @@ public class TwoSumSortedArray {
 - [Sliding Window Technique](https://stackoverflow.com/a/64111403/5331198)
 - [Sliding Window Technique 2](https://www.youtube.com/watch?v=MK-NZ4hN7rs)
 
+The **Sliding Window** technique aims to reduce the time complexity of a problem by reducing use of nested loop and replace it with a single loop.
+
 **Recognizing Sliding Window problems**
 
 - Contiguous sequence of elements
 - String, Arrays, LinkedList
 - Finding minimum, maximum, longest, shortest, contained within a subset
+
+**How to use Sliding Window technique**
+
+- Find the size of the window
+- Compute result of 1st window
+- Use a loop to slide the window by 1, and keep computing the result window by window
+
+**Example 1: Given an array of integers, calculate the sum of `k` consecutive elements in the array**
+
+- We compute the sum of the first `k` elements out of `n` terms using a linear loop and store it as `windowSum`
+- Then slide over the array by 1 element at a time, keeping track of the `maximumSum`
+- To get the current `windowSum` of k elements we subtract the first element from the previous window and add the last element of the current window
+
+```java
+public class SumOfKConsecutiveElements {
+    
+    private int kSum(int[] arr, int k) {
+        
+        int len = arr.length;
+        
+        if (len < k) return -1;
+        
+        //compute sum of first window
+        int maxSum = 0;
+        for (int i = 0; i < k; i++) {
+            maxSum += arr[i];
+        }
+
+      /**
+       * compute sum of remaining windows 
+       * by removing the first element of previous window
+       * and adding the last element of the current window
+       */
+      int windowSum = maxSum;
+      for (int i = k; i < len; i++) {
+          windowSum += arr[i] - arr[i - k];
+          maxSum = Math.max(maxSum, windowSum);
+      }
+      
+      return maxSum;
+    }
+}
+```
 
 ### Recursion
 
