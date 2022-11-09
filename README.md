@@ -23,13 +23,34 @@
 
 ### Arrays
 
+An array is a collection of items of same data type stored at contiguous memory locations.
+
+![Array](assets/array.gif)
+
+```java
+public class Array {
+    
+    public static void main(String... args) {
+        int[] a = new int[5];
+        int[] b = new int[]{};
+        int[] c = new int[]{1, 2, 3};
+        
+        a[2] = 5;
+    }
+}
+```
+
 **Time Complexity**
 
-| Operation | Big O | Note |
-|-----------|-------|------|
-
-**Pointers for Interview**
-- A
+| Operation             | Big O     | Note                                                                             |
+|-----------------------|-----------|----------------------------------------------------------------------------------|
+| Access                | O(1)      |                                                                                  |
+| Search                | O(n)      |                                                                                  |
+| Search (sorted array) | O(log(n)) |                                                                                  |
+| Insert                | O(n)      | Insertion would require shifting all the subsequent elements to the right by one |
+| Insert (at the end)   | O(1)      |                                                                                  |
+| Remove                | O(n)      | Removal would require shifting all the subsequent elements to the left by one    |
+| Remove (at the end    | O(1)      |                                                                                  |
 
 ### String
 
@@ -272,3 +293,5 @@ public class SumOfKConsecutiveElements {
 - Are there any optimizations that can be done?
 - Coding
   - Use `Integer.compare`, `Double.compare` for comparison.
+  - Be mindful about slicing or concatenating arrays. Typically, slicing and concatenating arrays would take O(n) time. Use `start` and `end` indices to demarcate a subarray/range where possible.
+  - 
