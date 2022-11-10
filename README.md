@@ -61,15 +61,15 @@ A string is a sequence of characters.
 
 **Time Complexity**
 
-| Operation                                        | Big O  | Note |
-|--------------------------------------------------|--------|------|
-| Access                                           | O(1)   |      |
-| Search                                           | O(n)   |      |
-| Insert                                           | O(n)   |      |
-| Remove                                           | O(n)   |      |
-| Find substring                                   | O(n.m) |      |
-| Concatenating strings                            | O(n+m) |      |
-| Strip (removing leading and trailing characters) | O(n)   |      |
+| Operation                                        | Big O  | Note                                 |
+|--------------------------------------------------|--------|--------------------------------------|
+| Access                                           | O(1)   |                                      |
+| Search                                           | O(n)   |                                      |
+| Insert                                           | O(n)   |                                      |
+| Remove                                           | O(n)   |                                      |
+| Find substring                                   | O(n.m) | Assuming other string is of length m |
+| Concatenating strings                            | O(n+m) | Assuming other string is of length m |
+| Strip (removing leading and trailing characters) | O(n)   |                                      |
 
 ### Stack
 
