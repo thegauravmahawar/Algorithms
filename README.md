@@ -23,9 +23,12 @@
 
 ### Arrays
 
-An array is a collection of items of same data type stored at contiguous memory locations.
+**Resources**
 
-![Array](assets/array.gif)
+- [Arrays 1](https://www.geeksforgeeks.org/arrays-in-java/)
+- [Arrays 2](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+
+An array is a collection of items of same data type stored at contiguous memory locations.
 
 ```java
 public class Array {
@@ -54,13 +57,19 @@ public class Array {
 
 ### String
 
+A string is a sequence of characters. 
+
 **Time Complexity**
 
-| Operation | Big O | Note |
-|-----------|-------|------|
-
-**Pointers for Interview**
-- A
+| Operation                                        | Big O  | Note |
+|--------------------------------------------------|--------|------|
+| Access                                           | O(1)   |      |
+| Search                                           | O(n)   |      |
+| Insert                                           | O(n)   |      |
+| Remove                                           | O(n)   |      |
+| Find substring                                   | O(n.m) |      |
+| Concatenating strings                            | O(n+m) |      |
+| Strip (removing leading and trailing characters) | O(n)   |      |
 
 ### Stack
 
