@@ -14,7 +14,7 @@
 - [Stack](#stack)
 - [Queue](#queue)
 - [LinkedList](#linkedlist)
-- [Hashing](#hashing)
+- [Hash Table](#hash table)
 - [Tree](#tree)
 - [Graph](#graph)
 - [Heap](#heap)
@@ -101,12 +101,28 @@ A string is a sequence of characters.
 **Pointers for Interview**
 - A
 
-### Hashing
+### Hash Table
+
+A hash table is a data structure that can map keys to values. A hash table uses a hash function on an element to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
+
+Instead of linearly searching an array every time to determine if an element is present, which takes O(n) time, we can traverse the array once and hash all the elements into a hash table.
+
+Collisions occur whenever a hash table's hashing function generates the same index for more than one key.
+
+**What makes a good Hash Table?**
+
+- It should be easy to compute. Hard to compute hash functions mean that we lose any advantage for quick and efficient lookup time.
+- It should avoid collision. Collisions are unavoidable but the more the collisions, the harder it is to come up with a fast, efficient algorithm for resolving them.
+- It should use all the input data, and always return the same key for the same hash bucket per value.
 
 **Time Complexity**
 
-| Operation | Big O | Note |
-|-----------|-------|------|
+| Operation | Big O | Note                                                    |
+|-----------|-------|---------------------------------------------------------|
+| Access    | N/A   | Accessing is not possible as the hash code is not known |
+| Search    | O(1)  |                                                         |
+| Insert    | O(1)  |                                                         |
+| Remove    | O(1)  |                                                         |
 
 **Pointers for Interview**
 - A
