@@ -14,7 +14,7 @@
 - [Stack](#stack)
 - [Queue](#queue)
 - [LinkedList](#linkedlist)
-- [Hash Table](#hash table)
+- [Hash Table](#hash-table)
 - [Tree](#tree)
 - [Graph](#graph)
 - [Heap](#heap)
