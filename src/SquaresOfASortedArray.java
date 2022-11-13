@@ -12,6 +12,12 @@ public class SquaresOfASortedArray {
     }
 
     /**
+     * We use two pointers technique here, where one pointer is at the start of the array and the other at the end of the array.
+     * We also use a result array to store the squares of each number in a sorted manner.
+     *
+     * We loop over the array and using the two pointers at each end, compare the absolute values of the two indices
+     * where the pointers are pointing.
+     *
      * @param nums
      * @return
      */
