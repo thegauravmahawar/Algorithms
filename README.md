@@ -129,17 +129,47 @@ Collisions occur whenever a hash table's hashing function generates the same ind
 
 ### Tree
 
-**Time Complexity**
+A tree is an abstract data type that represents a hierarchical structure with a set of connected nodes. Each node in a tree can be connected to many children, but must be connected to exactly one parent, except the root node, which has no parent.
 
-| Operation | Big O | Note |
-|-----------|-------|------|
+**Common terms**
 
-**Pointers for Interview**
-- A
+- **Neighbor** - Parent or child of a node
+- **Ancestor** - A node reachable by traversing its parent chain 
+- **Descendant** - A node in the node's subtree
+- **Degree** - Number of children of a node
+- **Distance** - Number of edges along the shortest path between two nodes
+- **Level/Depth** - Number of edges along the unique path between a node and the root node
+- **Width** - Number of nodes in a level
 
 #### Binary Tree
 
+Binary means two, so nodes in a binary tree have a maximum of two children.
+
+**Binary Tree terms**
+
+- Complete binary tree - Every level except possibly the last, completely filled, and all nodes in the last level are as far left as possible.
+- Balance binary tree - A binary tree structure in which the left and the right subtrees of every node differ in height by no more than 1.
+
+**Traversals**
+
+- In-order traversal - Left -> Root -> Right
+- Pre-order traversal - Root -> Left -> Right
+- Post-order traversal - Left -> Right -> Root
+
 #### Binary Search Tree
+
+In a Binary Search Tree, all the nodes to the left of the root node must be less than the value of the root node. All the nodes to the right of the root node must be greater than the value of the root node.
+
+All the subtrees to the left of the node will always be smaller in value than the subtrees to the right of a node, this applies not just to the main overarching tree structure, but to every single nested subtree as well.
+
+**Time Complexity**
+
+| Operation | Big O     | Note |
+|-----------|-----------|------|
+| Access    | O(log(n)) |      |
+| Search    | O(log(n)) |      |
+| Insert    | O(log(n)) |      |
+| Remove    | O(log(n)) |      |
 
 ### Graph
 
@@ -164,6 +194,8 @@ Collisions occur whenever a hash table's hashing function generates the same ind
 ## Techniques
 
 - [Binary Search](#binary-search)
+- [Breadth First Search](#breadth-first-search)
+- [Depth First Search](#depth-first-search)
 - [Merge Sort](#merge-sort)
 - [Two Pointer](#two-pointer)
 - [Sliding Window](#sliding-window)
@@ -173,6 +205,72 @@ Collisions occur whenever a hash table's hashing function generates the same ind
 - [Bit Manipulation](#bit-manipulation)
 
 ### Binary Search
+
+### Breadth First Search
+
+![Level Order Traversal](assets/level_order_traversal.png)
+
+```text
+Output
+
+1
+2 3
+4 5
+```
+
+```java
+class Node {
+    int data;
+    Node left, right;
+    public Node(int data) {
+        this.data = data;
+        left = right = null;
+    }
+}
+
+class BinaryTree {
+    Node root;
+    
+    public BinarySearch() { root = null; }
+  
+    void printLevelOrder() {
+        int h = height(root);
+        for (int i = 1; i <= h; i++) {
+            printCurrentLevel(root, i);
+        }
+    }
+    
+    int height(Node root) {
+        if (root == null) {
+            return 0;
+        } else {
+            int leftHeight = height(root.left);
+            int rightHeight = height(root.right);
+            
+            if (leftHeight > rightHeight) {
+                return leftHeight + 1;
+            } else {
+                return rightHeight + 1;
+            }
+        }
+    }
+    
+    void printCurrentLevel(Node root, int level) {
+        if (root == null) return;
+        
+        if (level == 1) {
+            System.out.println(root.data + " ");
+        } else if (level > 1) {
+            printCurrentLevel(root.left, level - 1);
+            printCurrentLevel(root.right, level - 1);
+        }
+    }
+}
+```
+
+### Depth First Search
+
+
 
 ### Merge Sort
 
