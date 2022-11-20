@@ -73,25 +73,77 @@ A string is a sequence of characters.
 
 ### Stack
 
+A stack is an abstract data type that supports the operations **push** (insert a new element on the top of the stack) and **pop** (remove and return the most recently added element, the element at the top of the stack).
+
+This behavior is commonly called LIFO (last in, first out). The name "stack" for this type of structure comes from the analogy to a set of physical items stacked on top of each other.
+
+```java
+class Stack {
+    static final int MAX = 1000;
+    int top;
+    int a[] = new int[MAX];
+    
+    Stack() {
+        top = -1;
+    }
+    
+    boolean isEmpty() {
+        return top < 0;
+    }
+    
+    boolean push(int n) {
+        if (top >= (MAX - 1)) {
+            System.out.println("Stack Overflow");
+            return false;
+        } else {
+            a[++top] = n;
+            return true;
+        }
+    }
+    
+    int pop() {
+        if (top < 0) {
+            System.out.println("Stack Underflow");
+            return 0;
+        } else {
+            return a[top--];
+        }
+    }
+    
+    int peek() {
+        if (top < 0) {
+            System.out.println("Stack Underflow");
+            return 0;
+        } else {
+            return a[top];
+        }
+    }
+}
+```
+
 **Time Complexity**
 
 | Operation | Big O | Note |
 |-----------|-------|------|
-
-**Pointers for Interview**
-
-- A
+| Top/Peek  | O(1)  |      |
+| Push      | O(1)  |      |
+| Pop       | O(1)  |      |
+| isEmpty   | O(1)  |      |
+| Search    | O(1)  |      |
 
 ### Queue
 
+A queue is a linear collection of elements that are maintained in a sequence and can be modified by the addition of elements at one end of the sequence (**enqueue** operation) and the removal of elements from the other end (**dequeue** operation).
+
 **Time Complexity**
 
-| Operation | Big O | Note |
-|-----------|-------|------|
-
-**Pointers for Interview**
-
-- A
+| Operation     | Big O | Note |
+|---------------|-------|------|
+| Enqueue/Offer | O(1)  |      | 
+| Dequeue/Poll  | O(1)  |      |
+| Front         | O(1)  |      |
+| Back          | O(1)  |      |
+| isEmpty       | O(1)  |      |
 
 ### LinkedList
 
