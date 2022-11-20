@@ -556,6 +556,67 @@ public class SumOfKConsecutiveElements {
 
 ### Dynamic Programming
 
+Dynamic programming is an approach to solving complex problems by breaking them down into smaller parts, and storing the result of these subproblems so that they only need to be computed once.
+
+```java
+//Recursive Approach
+static int fib(int n) {
+    if (n <= 1) {
+        return n;    
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+```
+
+There are two different ways to store values:
+
+- Memoization (Top-Down Approach)
+- Tabulation (Bottom-Up Approach)
+
+```java
+//Memoization (Top-Down Approach)
+public class Fibonacci {
+    
+    final int MAX = 100;
+    final int NIL = -1;
+    
+    int[] lookup = new int[MAX];
+    
+    void initialize() {
+        for (int i = 0; i < MAX; i++) {
+            lookup[i] = NIL;
+        }
+    }
+    
+    int fib(int n) {
+        if (lookup[n] == NIL) {
+            if (n <= 1) {
+                lookup[n] = n;
+            } else {
+                lookup[n] = fib[n - 1] + fib[n - 2];
+            }
+        }
+        return lookup[n];
+    }
+}
+```
+
+```java
+//Tabulation (Bottom-Up Approach)
+public class Fibonacci {
+    
+    int fib(int n) {
+        int[] f = new int[n + 1];
+        f[0] = 0;
+        f[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            f[i] = f[i - 1] + f[i - 1];
+        }
+        return f[n];
+    }
+}
+```
+
 ### Backtracking
 
 ### Bit Manipulation
@@ -581,4 +642,3 @@ public class SumOfKConsecutiveElements {
     - Use `Integer.compare`, `Double.compare` for comparison.
     - Be mindful about slicing or concatenating arrays. Typically, slicing and concatenating arrays would take O(n)
       time. Use `start` and `end` indices to demarcate a subarray/range where possible.
-    - 
