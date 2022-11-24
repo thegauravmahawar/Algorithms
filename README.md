@@ -147,14 +147,74 @@ A queue is a linear collection of elements that are maintained in a sequence and
 
 ### LinkedList
 
+Like arrays, a linked list is used to represent sequential data. It is a linear collection of data elements whose order is not given by their physical placement in memory, as opposed to arrays. Instead, each element contains an address of the next element. 
+
+In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence.
+
 **Time Complexity**
 
-| Operation | Big O | Note |
-|-----------|-------|------|
+| Operation | Big O | Note                                                 |
+|-----------|-------|------------------------------------------------------|
+| Access    | O(n)  |                                                      |
+| Search    | O(n)  |                                                      |
+| Insert    | O(1)  | Assumes you have traversed to the insertion position | 
+| Remove    | O(1)  | Assumes you have traversed to the node to be removed |
 
-**Pointers for Interview**
+**Detect loop in a Linked List**
 
-- A
+- Traverse linked list using two pointers
+- Move one pointer by one and another pointer by two
+- If these pointers meet at the same node then there is a loop
+
+```java
+class LinkedList {
+    
+    boolean hasCycle() {
+        
+        Node slow = head, fast = head;
+        while (slow != null && fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+```
+
+**Reverse a LinkedList**
+
+- Initialize 3 pointers - **prev** as `null`, **curr** as `head`, and **next** as `null`
+- Iterate through the linked list. In the loop, do the following:
+  - Before changing the **next** to **curr**, store the **next** node
+    - **next** = **curr** -> **next**
+  - Now update the **next** pointer of **curr** to the **prev**
+    - **curr** -> next = prev
+  - Update **prev** as **curr** and **curr** as **next**
+    - **prev** = **curr**
+    - **curr** = **next**
+
+```java
+class LinkedList{
+    
+    void reverse() {
+        Node prev = null;
+        Node current = node;
+        Node next = null;
+        
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        node = prev;
+        retur node;
+    }
+}
+```
 
 ### Hash Table
 
