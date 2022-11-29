@@ -542,6 +542,60 @@ Output
 
 ### Merge Sort
 
+```java
+void sort(int arr[], int low, int high) {
+    if (low < high) {
+        int mid = low + (high - low) / 2;
+        sort(arr, low, mid);
+        sort(arr, mid + 1, high);
+        
+        merge(arr, low, mid, high);
+    }    
+}
+
+void merge(int arr[], int low, int mid, int high) {
+    // size of two sub arrays
+    int s1 = mid - 1 + 1;
+    int s2 = high - mid;
+    
+    // create temp arrays
+    int[] L = new int[s1];
+    int[] R = new int[s2];
+    
+    for (int i = 0; i < s1; i++) L[i] = arr[low + 1];
+    for (int j = 0; j < s2; j++) R[i] = arr[mid + 1 + j];
+    
+    // merge the temp arrays
+    int i = 0, j = 0; // initial indexes of first and second sub arrays
+    int k = low;
+    
+    while (i < s1 && j < s2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+    
+    // copy remaining elements of L[] if any
+    while (i < s1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+    
+    // copy remaining elements of R[] if any
+    while (j < s2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+}
+```
+
 ### Two Pointer
 
 **Resources**
