@@ -21,6 +21,10 @@
 
 ### Basics
 
+**Recursion**
+
+- [Solving Recursion Problems](https://www.youtube.com/watch?v=ngCos392W4w)
+
 ### Arrays
 
 **Resources**
