@@ -22,6 +22,71 @@
 
 ### Basics
 
+**Algorithms**
+
+**Time Complexity**
+
+**Space Complexity**
+
+It is the memory required by an algorithm to execute a program and produce output.
+
+For any algorithm memory is required for the following purposes:
+
+- To store program instructions.
+- To store constant values.
+- To store variable values.
+- Function calls, jumping statements.
+
+Auxiliary space - It is the temporary space (excluding input size) allocated by our algorithm to solve the problem, with respect to input size.
+
+Space complexity includes both Auxiliary space and space used by the input.
+
+```text
+//Considering n1 and n2 as Integers
+//n1 = 4 bytes
+//n2 = 4 bytes
+//sum = 4 bytes
+//Auxiliary space = 4 bytes
+//Total = 16 bytes
+//No matter the values of n1 and n2, the total will be 16 bytes
+//This can be considered as a constant space algorithm or O(1)
+function int add(n1, n2) {
+    sum = n1 + n2
+    return sum
+} 
+```
+
+```text
+//arr = N x 4 bytes
+//sum = 4 bytes
+//i = 4 bytes
+//Auxiliary space = 4 bytes
+//Total = 4N + 12 bytes = 4N + C = O(N)
+function int sumOfNumbers(arr[], N) {
+    sum = 0
+    for (i = 0 to N) {
+        sum = sum + arr[i]
+    }
+    return sum
+}
+```
+
+```text
+//fact = 4 bytes
+//n = 4 bytes
+//i = 4 bytes
+//Auxiliary space = 4 bytes
+//Note: Here we are calculating the Space complexity and not the Time complexity 
+//so the loop does not count as N iterations as we are updating the same variable.
+int factorial(n) {
+    fact = 1;
+    for (i = 1 to N) {
+        fact *= i
+    }
+    return fact;
+}
+```
+
 ### Recursion
 
 **Resources**
