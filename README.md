@@ -9,6 +9,7 @@
 ## Topics
 
 - [Basics](#basics)
+- [Recursion](#recursion)
 - [Arrays](#arrays)
 - [String](#string)
 - [Stack](#stack)
@@ -21,7 +22,9 @@
 
 ### Basics
 
-**Recursion**
+### Recursion
+
+**Resources**
 
 - [Solving Recursion Problems](https://www.youtube.com/watch?v=ngCos392W4w)
 
