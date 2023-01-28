@@ -87,6 +87,8 @@ int factorial(n) {
 }
 ```
 
+Recursive functions take more space as the number of recursive calls depend on the input N, and the call stack keeps increasing due to this. A single call stack will hold memory required by 1 function call.
+
 ### Recursion
 
 **Resources**
