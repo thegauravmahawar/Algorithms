@@ -9,7 +9,7 @@ public class MaximumSubarray {
     }
 
     private static int maxSubArray(int[] nums) {
-        int maxSum = 0;
+        int maxSum = Integer.MIN_VALUE;
         int subArraySum = 0;
 
         for (int num : nums) {
