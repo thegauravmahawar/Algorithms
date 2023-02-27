@@ -25,6 +25,8 @@
 
 **Algorithms**
 
+An algorithm is a series of contained steps, which you follow in order to achieve some goal, or to produce some output.
+
 **Time Complexity**
 
 **Space Complexity**
