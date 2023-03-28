@@ -5,8 +5,8 @@
 public class ClimbingStairs {
 
     public static void main(String... args) {
-        System.out.println(climbStairs(climbStairs(2)));
-        System.out.println(climbStairs(climbStairs(3)));
+        System.out.println(climbStairs(2));
+        System.out.println(climbStairs(5));
     }
 
     private static int climbStairs(int n) {
